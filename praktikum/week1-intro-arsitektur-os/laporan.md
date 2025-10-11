@@ -17,13 +17,12 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 1. Menjelaskan peran sistem operasi dalam arsitektur komputer.
 2. Mengidentifikasi komponen utama OS (kernel, system call, device driver, file system).
 3. Membandingkan model arsitektur OS (monolithic, layered, microkernel).
-4. Menggambarkan diagram sederhana arsitektur OS menggunakan alat bantu digital (draw.io / mermaid).elaskan fungsi utama sistem operasi dan peran kernel serta system call.
-
+4. Menggambarkan diagram sederhana arsitektur OS menggunakan alat bantu digital (draw.io / mermaid).
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
-
+1. _Operating System_ adalah perangkat lunak utama pada sebuah komputer yang mengelola seluruh sumber daya pada perangkat lunak dan perangkat keras, serta menyediakan antarmuka bagi pengguna untuk mengoperasikan komputer.
+2. 
 ---
 
 ## Langkah Praktikum
