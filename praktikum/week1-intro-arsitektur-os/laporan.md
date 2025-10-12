@@ -22,7 +22,9 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 ## Dasar Teori
 1. _Operating System_ adalah perangkat lunak utama pada sebuah komputer yang mengelola seluruh sumber daya pada perangkat lunak dan perangkat keras, serta menyediakan antarmuka bagi pengguna untuk mengoperasikan komputer.
-2. 
+2. _Kernel_ merupakan program komputer yang menjadi inti dari sebuah sistem operasi komputer, dengan kontrol terhadap segala hal atas sistem tersebut.
+3. _System Call_ adalah sebuah mekanisme bagi program aplikasi untuk meminta layanan dari sistem operasi.
+4. 
 ---
 
 ## Langkah Praktikum
@@ -80,7 +82,7 @@ dmesg | head
 
 ## Hasil Eksekusi
 
-![alt text](<screenshots/ss_tugas.png>)
+![screenshots](<screenshots/ss_tugas.png>)
 
 ---
 
@@ -107,8 +109,10 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?
+  **Jawaban:** Cara mengoperasikan github
+- Bagaimana cara Anda mengatasinya?
+  **Jawaban:** Mencari tutorial di internet dan berdiskusi dengan orang lain.
 
 ---
 
