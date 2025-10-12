@@ -94,15 +94,16 @@ dmesg | head
 - Hubungan dengan teori:
   1. Kernel mengelola informasi sistem (uname), pengguna (whoami), modul perangkat keras (lsmod), serta proses inisialisasi dan log sistem sejak komputer dinyalakan (dmesg).
   2. System call memungkinkan perintah di user space melalui Shell untuk berinteraksi aman dengan kernel space tanpa langsung mengakses hardware.
-  3. 
+  3. Kernel dan user di sistem operasi ini memiliki akses yang berbeda terhadap sumber daya komputer. User memiliki akses yang lebih sedikit dibandingkan kernel yang bisa langsung berkomunikasi dengan hardware.
   
 - Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
-
+ 1. Linux memiliki arsitektur berlapis yang memisahkan ruang pengguna (user space) dan kernel.
+ 2. Kernel menjadi perantara antara sistem aplikasi dengan hardware melalui system call.
+ 3. Perintah seperti ```uname, whoami, lsmod, dmesg``` berfungsi untuk menampilkan informasi tentang perangkat dan user.
 ---
 
 ## Quiz
