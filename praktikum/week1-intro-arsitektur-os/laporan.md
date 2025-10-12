@@ -91,7 +91,10 @@ dmesg | head
   2. ```whoami``` menampilkan nama pengguna yang sedang login.
   3. ```lsmod | head``` menampilkan daftar modul kernel yang sedang dimuat, perintah ```head``` akan membuat hanya 10 baris pertama yang di tampilkan.
   4. ```dmesg | head``` menampilkan pesan log sistem (pesan dari kernel) sejak komputer dinyalakan atau sistem di-boot.
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
+- Hubungan dengan teori:
+  • Kernel mengelola informasi sistem (uname), pengguna (whoami), modul perangkat keras (lsmod), serta proses inisialisasi dan log sistem sejak komputer dinyalakan (dmesg).
+  • System call memungkinkan perintah di user space melalui Shell untuk berinteraksi aman dengan kernel space tanpa langsung mengakses hardware.
+  • 
 - Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
 
 ---
