@@ -24,7 +24,6 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 1. _Operating System_ adalah perangkat lunak utama pada sebuah komputer yang mengelola seluruh sumber daya pada perangkat lunak dan perangkat keras, serta menyediakan antarmuka bagi pengguna untuk mengoperasikan komputer.
 2. _Kernel_ merupakan program komputer yang menjadi inti dari sebuah sistem operasi komputer, dengan kontrol terhadap segala hal atas sistem tersebut.
 3. _System Call_ adalah sebuah mekanisme bagi program aplikasi untuk meminta layanan dari sistem operasi.
-4. 
 ---
 
 ## Langkah Praktikum
@@ -96,8 +95,9 @@ dmesg | head
   2. System call memungkinkan perintah di user space melalui Shell untuk berinteraksi aman dengan kernel space tanpa langsung mengakses hardware.
   3. Kernel dan user di sistem operasi ini memiliki akses yang berbeda terhadap sumber daya komputer. User memiliki akses yang lebih sedikit dibandingkan kernel yang bisa langsung berkomunikasi dengan hardware.
   
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
-
+- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?
+  • Hasil percobaan perintah di Linux akan berbeda jika dlakukan di Windows, karena perintah seperti ```uname, lsmod, dmesg``` adalah perintah khusus linux yang dimana Windows tidak mendukung untuk menjalankan perintah itu. Secara umum, 
+Windows membatasi akses pengguna terhadap sistem inti dan kernel demi menjaga keamanan sistem itu sendiri, sehingga interaksi pengguna dilakukan melalui antarmuka tertentu. Sementara itu, Linux lebih membebaskan pengguna untuk mengakses dan memodifikasi sistem melalui terminal.
 ---
 
 ## Kesimpulan
