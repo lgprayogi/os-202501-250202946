@@ -106,6 +106,25 @@ Windows membatasi akses pengguna terhadap sistem inti dan kernel demi menjaga ke
  3. Perintah seperti ```uname, whoami, lsmod, dmesg``` berfungsi untuk menampilkan informasi tentang perangkat dan user.
 ---
 
+## Ringkasan
+ARSITEKTUR SISTEM OPERASI KOMPUTER
+
+ A. MODEL ARSITEKTUR OS
+  1. MONOLITHIC KERNEL
+Dalam pendekatan monolitik  seluruh sistem operasi berjalan sebagai satu program di mode kernel. Sistem ini ditulis sebagai sekumpulan prosedur digabung menjadi satu program biner besar. Saat digunakan, semua prosedur di dalam sistem dapat memanggil satu sama lain jika prosedur tersebut menyediakan perhitungan yang dibutuhkan. Kemampuan untuk memanggil semua prosedur yang dibutuhkan sangat efisien, namun mempunyai ribuan prosedur yang bisa memanggil satu sama lain tanpa batasan bisa mengakibatkan sistem yang sulit dikendalikan dan sulit dimengerti. Selain itu jika salah satu prosedur _crash_ akan mengakibatkan semua prosedur ikut gagal. Meski begitu kecepatan dan efisiensi monolitik kernel menjadi jawaban mengapa kita masih melihat struktur ini digunakan di sistem operasi unix Linux dan Windows. 
+  2. MICROKERNEL
+Sekitar tahun 1980 peneliti di Carnegie Mellon University mengembangkan sebuah sistem operasi bernama Mach yang menggunakan pendekatan mikrokerneL. Metode ini menyusun sistem operasi dengan menghapus komponen-komponen yang kurang dibutuhkan dari kernel dan menerapkannya ke program tingkat pengguna yang berada di ruang terpisah. Hasilnya adalah kernel yang lebih kecil, salah satu keuntungannya yaitu membuat perluasan sistem operasi menjadi lebih mudah dari sebelumnya. Semua layanan baru ditambahkan ke ruang pengguna dan tidak memerlukan modifikasi kernel dan ketika kernel memang perlu dimodifikasi, perubahannya cenderung lebih kecil karena microkernel adalah kernel yang lebih kecil. Microkenel juga memberikan keamanan dan keandalan yang lebih baik karena sebagian besar layanan bekerja sebagai proses pengguna dan bukan proses kernel. Jika salah satu layanan gagal, operasi lain akan tetap berjalan. Contoh yang paling dikenal adalah Darwin, komponen kernel dari sistem operasi Mac OS dan iOS.  
+  3. LAYERED ARCHITECTURE
+Sebuah sistem bisa dibuat modular lewat banyak cara, salah satu metodenya yaitu layered approach dimana sistem operasi dipisah menjadi beberapa layers(lapisan) layer bawah atau layer 0 adalah hardware. Layer yang tertinggi adalah interface pengguna. Sebuah lapisan sistem operasi adalah implementasi dari objek abstrak yang terdiri dari data dan operasi yang bisa memanipulasi data tersebut. Misalnya lapisan M, terdiri dari struktur data dan serangkaian fungsi yang dapat dipanggil oleh lapisan tingkat yang lebih tinggi. Lapisan M, pada gilirannya, dapat memanggil operasi pada lapisan tingkat yang lebih rendah. Keuntungan utama dari layer approach adalah kesederhanaan konstruksi dan lapisannya dipilih sehingga masing-masing hanya menggunakan fungsi dan layanan dari lapisan yang lebih rendah. lapisan pertama dapat _debug_ tanpa khawatir dengan sistem sisanya, karena lapisan ini hanya menggunakan perangkat keras dasar untuk dapat dijalankan fungsinya. Setelah lapisan pertama selesai di _debug_ fungsi yang benar dapat diasumsikan saat lapisan kedua di _debug_ dan seterusnya. Jika ditemukan kesalahan saat _debugging_ lapisan tertentu, kesalahan tersebut pasti ada di lapisan itu. Contoh sistem operasi yang menggunakan adalah the OS.
+
+ B. ANALISIS
+Manakah yang paling relevan untuk teknologi modern?
+Dalam prakteknya sangat sedikit sistem operasi yang terpakumengadopsi satu struktur. Sebaliknya mereka menggabungkan berbagai struktur menghasilkan sistem hibrida yang menangani masalah performa keamanan dan juga kegunaan sebagai contohnya Linux bersifat monolitik karena memiliki seluruh sistem operasi dalam suatu ruang alamat memberikan performa yang sangat efisien namun Linux juga modular sehingga fungsi baru bisa ditambahkan ke kernel secara dinamis Windows sebagian besar juga monolitik karena alasan performa tetapi tetap mempertahankan beberapa perilaku khas sistem mikrokernel termasuk mendukung subsistem terpisah dikenal sebagai operating system personalitis yang berjalan sebagai proses mode pengguna
+
+ C. REFERENSI
+1. Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System Concepts, 10th Edition, Wiley, 2018.
+2. Andrew S. Tanenbaum, Herbert Bos. Modern Operating Systems, 4th Edition, Pearson, 2015.
+   
 ## Quiz
 1. Sebutkan tiga fungsi utama sistem operasi.
    **Jawaban:** Fungsi utama sistem operasi yaitu manajemen sumber daya, manajemen proses, dan antarmuka pengguna.
@@ -118,7 +137,7 @@ Windows membatasi akses pengguna terhadap sistem inti dan kernel demi menjaga ke
 ## Refleksi Diri
 Tuliskan secara singkat:
 - Apa bagian yang paling menantang minggu ini?
-  **Jawaban:** Cara mengoperasikan github
+  **Jawaban:** Cara mengoperasikan git
 - Bagaimana cara Anda mengatasinya?
   **Jawaban:** Mencari tutorial di internet dan berdiskusi dengan orang lain.
 
