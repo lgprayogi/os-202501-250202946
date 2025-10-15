@@ -82,8 +82,11 @@ dmesg | tail -n 10
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+![Screenshot hasil](<screenshots/stracels1.jpeg>)
+![Screenshot hasil](<screenshots/stracels2.jpeg>)
+![Screenshot hasil](<screenshots/strace_e.jpeg>)
+![Screenshot hasil](<screenshots/dmesg.jpeg>)
+
 
 ---
 
