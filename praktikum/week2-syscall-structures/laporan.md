@@ -91,9 +91,15 @@ dmesg | tail -n 10
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+1. Hasil eksperimen ```strace``` dan ```dmesg``` dalam bentuk tabel observasi.
+2. Diagram alur system call
+
+
+![diagram syscall](<screenshots/syscall-diagram.jpg>)
+
+
+
+3. Analisis
 
 ---
 
