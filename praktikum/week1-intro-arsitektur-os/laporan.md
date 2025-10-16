@@ -81,6 +81,7 @@ dmesg | head
 ## Hasil Eksekusi
 
 ![screenshots](<screenshots/ss_tugas.png>)
+![diagram os](<screenshots/diagram-os.png>)
 
 ---
 
