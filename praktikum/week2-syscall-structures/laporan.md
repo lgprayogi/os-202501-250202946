@@ -21,7 +21,9 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+System call adalah sebuah metode dimana program komputer meminta layanan tertentu dari sistem operasi.
+System call juga menjadi penjaga agar setiap aplikasi di _user space_ melewati perizinan sebelum dapat mengakses sumber daya komputer.
+Beberapa kategori utama system call yaitu manajemen proses, manajemen berkas, manajemen perangkat, pemeliharaan informasi, dan komunikasi.
 
 ---
 
@@ -110,9 +112,13 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ## Quiz
 1. Apa fungsi utama system call dalam sistem operasi?  
-   **Jawaban:**  
+   **Jawaban:**  System call berfungsi sebagai penghubung agar aplikasi di program pengguna dapat meminta layanan tertentu dari sistem operasi seperti manajemen proses, manajemen file, manajemen perangkat, dan komunikasi antar-proses.
 2. Sebutkan 4 kategori system call yang umum digunakan!  
-   **Jawaban:**  
+   **Jawaban:**
+   1. Manajemen proses, mengatur pembuatan, eksekusi, dan pemberhentian proses.
+   2. Manajemen berkas, mengelola file seperti membuka, membaca, menulis, dan menutup file
+   3. Manajemen perangkat, mengatur akses ke perangkat keras input dan output.
+   4. Komunikasi, mengatur pertumaran data antarproses dan antarperangkat melalui jaringan.
 3. Mengapa system call tidak bisa dipanggil langsung oleh user program?  
    **Jawaban:**  
 
