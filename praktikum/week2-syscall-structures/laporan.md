@@ -131,7 +131,9 @@ dmesg | tail -n 10
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+- System Call berfungsi sebagai penghubung antara program pengguna dan kernel sekaligus penjaganya.
+- Keamanan system call dijalankan dengan menandai berbagai perintah sebagai _privileged instructions_ yang membuat perintah tidak bisa dijalankan di mode pengguna
+- Setiap permintaan dari program pengguna ke sistem operasi akan memicu trap atau interrupt yang membuatnya beralih ke mode kernel agar dapat menjalankan perintah
 
 ---
 
@@ -145,14 +147,14 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
    3. Manajemen perangkat, mengatur akses ke perangkat keras input dan output.
    4. Komunikasi, mengatur pertumaran data antarproses dan antarperangkat melalui jaringan.
 3. Mengapa system call tidak bisa dipanggil langsung oleh user program?  
-   **Jawaban:**  
+   **Jawaban:**   Karena user program berjalan di dalam mode pengguna, sedangkan sejumlah perintah atau instruksi ditandai sebagai _privileged instructions_ yang dimana perintah ini tidak akan bisa di jalankan di mode pengguna, dan hanya bisa di jalankan di mode kernel sehingga user program tidak akan bisa melakukan perintah tersebut secara langsung.
 
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?  Memahami berbagai perintah system call
+- Bagaimana cara Anda mengatasinya?  Membaca dari berbagai sumber di internet
 
 ---
 
