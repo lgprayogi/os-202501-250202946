@@ -101,8 +101,33 @@ dmesg | tail -n 10
 
 
 
-3. Analisis
+3. Ringkasan
+   - Pentingnya _System Call_ Untuk Keamanan Sistem Operasi
+  
+       System call adalah suatu penghubung antara pengguna dan sistem operasi atau kernel space. Melalui _system call_, pengguna meminta layanan atau izin dari kernel agar perangkat dapat digunakan. Misalnya, pengguna dapat meminta izin ke kernel untuk membaca file, menempatkan memori, ataupun juga bisa menjadi perantara agar pengguna dapat berinteraksi dengan perangkat keras (hardware) tanpa memberikan akses penuh. Dari sisi keamanan, _system call_ adalah penghubung antara aplikasi dan kernel, tanpa ini, program pengguna bisa langsung mengakses sumber daya kernel, hal ini berbahaya karena oengguna bisa secara tidak sengaja memodifikasi sistem dan menyebabkan kerusakan. Dengan kata lain, _system call_ menjadi penghubung sekaligus penjaga yang memastikan setiap aplikasi melewati izin terlebih dahulu sebelum dapat mengakses ke inti sistem.
+   - Bagaimana Sistem Operasi Memastikan Transisi _user-kernel_ Berjalan Aman
+   
+       Saat dalam _boot time_ atau saat komputer pertama kali dinyalakan. Hardware selalu mulai dalam mode kernel. Lalu sistem operasi dimuat dan memulai program pengguna di ruang pengguna (user space). Setiap _trap_ atau _interrupt_ terjadi, hardware akan beralih dari mode pengguna ke mode kernel. Sehingga, setiap kali sistem operasi mendapatkan kontrol terhadap komputer, akan selalu dalam mode kernel dan sistem selalu berpindah ke mode pengguna sebelum memberi kontrol ke program pengguna. _Interrupt & Trap_ adalah mekanisme yang digunakan untuk mengalihkan kontrol dari program pengguna ke mode kernel. Interrupt berasal dari luar CPU, misalnya hardware seperti keyboard, mouse, dan sebagainya. Sedangkan Trap merupakan interrupt yang disebabkan oleh instruksi dalam program itu sendiri. Misalnya, perintah read()
+   , CPU akan membuat interrupt agar software melakukan perintah. Dual mode operasi ini memberi perlindungan ke sistem operasi terhadap kesalahan pengguna dan pengguna dari kesalahannya sendiri. Perlindungan ini dilakukan dengan cara menandai sejumlah instruksi berbahaya sebagai _privileged instructions_. Yang artinya, instruksi yang di tandai sebagai _privileged instructions_ hanya bisa dieksekusi atau dijalankan di mode kernel. Saat terdapat percobaan untuk menjalankan perintah ini di mode pengguna, hardware tidak akan menjalankan perintah itu dan menganggapnya sebagai ilegal dan melakukan _trap_ ke sistem operasi.
+   - Contoh _system call_ yang sering digunakan
 
+     | Perintah | Keterangan |
+     |:-------:|:--------|
+     | read() | Membaca data dari file descriptor|
+     | write() | Menuliskan data ke file descriptor|
+     | open() | Membuka file dan mengembalikan file descriptor untuk digunakan oleh proses|
+     | close() | Menutup file descriptor yang sudah tidak digunakan|
+     | fork() | Membuat proses baru (child process) yang merupakan salinan dari proses induk|
+     | exec() | Menjalankan program baru, menggantikan proses yang sedang berjalan|
+     | wait() | Menunggu _child process_ selesai dieksekusi|
+     | exit() | Mengakhiri eksekusi program dengan status tertentu|
+     | getpid() | Mengambil ID proses (Process ID) dari proses yang sedang berjalan|
+     | mkdir() | Membuat direktori baru di sistem file|
+     | rename() | Mengubah nama file|
+     | time() | Mengambil waktu sistem saat ini|
+     | alarm() | Mengatur timer untuk menghasilkan sinyal setelah waktu tertentu|
+     | uname() | Mengambil informasi tentang sistem kernel|
+     | chmod() | Mengubah izin akses file |
 ---
 
 ## Kesimpulan
