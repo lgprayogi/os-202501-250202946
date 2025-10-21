@@ -94,6 +94,22 @@ dmesg | tail -n 10
 
 ## Analisis
 1. Hasil eksperimen ```strace``` dan ```dmesg``` dalam bentuk tabel observasi.
+
+- strace
+
+
+| Perintah | Keterangan Perintah | Output | Keterangan Output |
+|:---:|:---|:----:|:-----|
+| strace ls | Melacak system call yang dipanggil| execve()| Menjalankan program baru|
+|   |    | mmap() | Memetakan file ke memori |
+| | | brk() | mengubah ukuran segmen data |
+| | | access() | mengecek hak akses file |
+| | | openat() | membuka file atau direktori |
+| | | fstat() | mengambil informasi file |
+| | | close() | menutup file atau direktori|
+| | | read() | membaca data dari file |
+
+   
 2. Diagram alur system call
 
 
