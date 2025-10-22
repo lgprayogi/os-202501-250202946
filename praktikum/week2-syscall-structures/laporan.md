@@ -135,7 +135,7 @@ dmesg | tail -n 10
    
        Saat dalam _boot time_ atau saat komputer pertama kali dinyalakan. Hardware selalu mulai dalam mode kernel. Lalu sistem operasi dimuat dan memulai program pengguna di ruang pengguna (user space). Setiap _trap_ atau _interrupt_ terjadi, hardware akan beralih dari mode pengguna ke mode kernel. Sehingga, setiap kali sistem operasi mendapatkan kontrol terhadap komputer, akan selalu dalam mode kernel dan sistem selalu berpindah ke mode pengguna sebelum memberi kontrol ke program pengguna. _Interrupt & Trap_ adalah mekanisme yang digunakan untuk mengalihkan kontrol dari program pengguna ke mode kernel. Interrupt berasal dari luar CPU, misalnya hardware seperti keyboard, mouse, dan sebagainya. Sedangkan Trap merupakan interrupt yang disebabkan oleh instruksi dalam program itu sendiri. Misalnya, perintah read()
    , CPU akan membuat interrupt agar software melakukan perintah. Dual mode operasi ini memberi perlindungan ke sistem operasi terhadap kesalahan pengguna dan pengguna dari kesalahannya sendiri. Perlindungan ini dilakukan dengan cara menandai sejumlah instruksi berbahaya sebagai _privileged instructions_. Yang artinya, instruksi yang di tandai sebagai _privileged instructions_ hanya bisa dieksekusi atau dijalankan di mode kernel. Saat terdapat percobaan untuk menjalankan perintah ini di mode pengguna, hardware tidak akan menjalankan perintah itu dan menganggapnya sebagai ilegal dan melakukan _trap_ ke sistem operasi.
-   - Contoh _system call_ yang sering digunakan
+   - Contoh _system call_ yang sering digunakan:
 
      | Perintah | Keterangan |
      |:-------:|:--------|
