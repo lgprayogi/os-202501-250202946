@@ -95,8 +95,6 @@ dmesg | tail -n 10
 ## Analisis
 1. Hasil eksperimen ```strace``` dan ```dmesg``` dalam bentuk tabel observasi.
 
-- strace
-
 
 | Perintah | Keterangan Perintah | Output | Keterangan Output |
 |:---:|:---|:----:|:-----|
@@ -108,6 +106,7 @@ dmesg | tail -n 10
 | | | fstat() | mengambil informasi file |
 | | | close() | menutup file atau direktori|
 | | | read() | membaca data dari file |
+| dmesg tail -n 10 | digunakan untuk memeriksa atau mengontrol ring buffer kernel, perintah -n 10 akan membuatnya hanya menampilkan 10 output terakhir | |
 
    
 2. Diagram alur system call
