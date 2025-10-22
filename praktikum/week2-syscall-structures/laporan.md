@@ -106,7 +106,18 @@ dmesg | tail -n 10
 | | | fstat() | mengambil informasi file |
 | | | close() | menutup file atau direktori|
 | | | read() | membaca data dari file |
-| dmesg tail -n 10 | digunakan untuk memeriksa atau mengontrol ring buffer kernel, perintah -n 10 akan membuatnya hanya menampilkan 10 output terakhir | |
+| dmesg tail -n 10 | digunakan untuk memeriksa atau mengontrol ring buffer kernel, perintah -n 10 akan membuatnya hanya menampilkan 10 output terakhir | [1687.711753] | merupakan waktu (detik) setelah komputer dinyalakan |
+| | | [ 1687.711753] sd 0:0:2:0: [sdb] Mode Sense: 1f 00 00 08 | sistem mendeteksi perangkat penyimpanan baru |
+| | | [ 1687.712031] sd 0:0:2:0: [sdb] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA | disk memiliki cache baca/tulis aktif tapi tidak memiliki fitur DPO atau FUA|
+| | |[ 1687.936211]  sdb: sdb1| Kernel menemukan partisi pertama pada disk |
+| | | [ 1687.939070] sd 0:0:2:0: [sdb] Attached SCSI disk | perangkat penyimpanan dihubungkan ke sistem |
+| | | [ 1688.119387] EXT4-fs (sdb1): mounted filesystem b9f0e455-8c03-483b-a0d6-629a47561fb9 r/w with ordered data mode. Quota mode: none. | partisi sdb1 dengan sistem file EXT4 berhasil di-mount dalam mode baca/tulis|
+| | | [ 1689.263679] LoadPin: kernel-module pinning-excluded obj="/lib/modules/6.6.105+/kernel/net/ipv4/netfilter/iptable_nat.ko" pid=2153 cmdline="/sbin/modprobe -q -- iptable_nat" | kernel memuat modul iptable.nat untuk fitur NAT di jaringan |
+| | | [ 1689.367369] LoadPin: kernel-module pinning-excluded obj="/lib/modules/6.6.105+/kernel/net/netlink/netlink_diag.ko" pid=2173 cmdline="/sbin/modprobe -q -- net-pf-16-proto-4-type-16"| modul netlink_diag dimuat untuk mendiagnosis koneksi jaringan|
+| | | [ 1691.930015] LoadPin: kernel-module pinning-excluded obj="/lib/modules/6.6.105+/kernel/net/netfilter/ipset/ip_set.ko" pid=2451 cmdline="/sbin/modprobe -q -- ipt_set" | modul ip_set dimuat untuk mengimpan daftar alamat IP|
+| | | [ 1691.951106] LoadPin: kernel-module pinning-excluded obj="/lib/modules/6.6.105+/kernel/net/netfilter/xt_set.ko" pid=2451 cmdline="/sbin/modprobe -q -- ipt_set" | modul xt_set dimuat untuk rule matching di iptables |
+| | | [ 1691.982746] LoadPin: kernel-module pinning-excluded obj="/lib/modules/6.6.105+/kernel/net/ipv6/netfilter/ip6table_nat.ko" pid=2458 cmdline="/sbin/modprobe -q -- ip6table_nat" | modul ip6table_nat dimuat untuk NAT di jaringan IPv6|
+
 
    
 2. Diagram alur system call
