@@ -154,8 +154,24 @@ Penjelasan:
 | rw- | owner (root) bisa membaca dan menulis |
 | r-- | group (root) hanya bisa membaca |
 | r-- | selain owner dan group juga hanya bisa membaca |
-   
 
+Keterangan ini juga bisa dilihat dari gambar berikut:
+
+![Permission Code](<screenshots/Permission.png>)
+
+1. Karakter pertama: tipe file
+   - (-) : file biasa
+   - d : direktori
+2. Sembilan karakter berikutnya terbagi menjadi 3:
+   - rwx → owner
+   - rwx → group
+   - rwx → others
+3. Setiap huruf mempunyai arti:
+   - r : read
+   - w : write
+   - x : execute
+   - (-) : tidak ada izin
+       
 ## Kesimpulan
 Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
