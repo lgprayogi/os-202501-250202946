@@ -87,9 +87,14 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 ## Kode / Perintah
 Tuliskan potongan kode atau perintah utama:
 ```bash
-uname -a
-lsmod | head
-dmesg | head
+pwd
+ls -l
+cd /tmp
+ls -a
+echo "Hello <Lintang><250202946>" > percobaan.txt
+ls -l percobaan.txt
+chmod 600 percobaan.txt
+ls -l percobaan.txt
 ```
 
 ---
@@ -157,19 +162,19 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. Apa fungsi dari perintah `chmod`?
+   **Jawaban:**  Perintah `chmod` berfungsi untuk mengubah izin akses (baca, tulis, eksekusi) pada berkas dan direktori.
+2. Apa arti dari kode permission `rwxr-xr--`?
+   **Jawaban:**  kode permission `rwxr-xr--` berarti owner memiliki izin akses baca(r), tulis(w), dan eksekusi(x). Sedangkan grup memiliki izin akses baca dan eksekusi, dan others memiliki izin akses hanya baca saja.
+3. Jelaskan perbedaan antara chown dan chmod.
+   **Jawaban:**  perintah `chown` berfungsi untuk mengubah kepemilikan sebuah berkas atau direktori, sedangkan perintah `chmod` berfungsi untuk mengubah izin aksesnya.
 
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?  Memahami perintah linux dan fungsinya.
+- Bagaimana cara Anda mengatasinya?  Mempelajarinya lewat berbagai sumber di internet.
 
 ---
 
