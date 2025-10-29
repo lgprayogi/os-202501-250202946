@@ -22,7 +22,9 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+1. Linux adalah sebuah sistem operasi berbasis Unix yang berfungsi untuk mengelola perangkat keras dan perangkat lunak pada komputer. Salh satu kegunaannya yaitu manajemen file.
+2. Linux menggunakan izin untuk mengatur siapa yang dapat membaca, menulis, atau menjalankan sebuah file.
+3. Linux membagi hak akses file ke tiga kategori: owner, group, dan others. Pengguna dapat mengatur siapa yang dapat membaca, menulis, atau menjalankan file dengan perintah `chmod` dan mengubah kepemilikannya dengan perintah `chown`.
 
 ---
 
@@ -85,7 +87,7 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 ---
 
 ## Kode / Perintah
-Tuliskan potongan kode atau perintah utama:
+
 ```bash
 pwd
 ls -l
@@ -100,7 +102,7 @@ ls -l percobaan.txt
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
+
 ![Screenshot hasil](<screenshots/sscmdweek4.jpeg>)
 
 ---
@@ -173,7 +175,10 @@ Keterangan ini juga bisa dilihat dari gambar berikut:
    - (-) : tidak ada izin
        
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+
+- Struktur file dalam Linux terorganisir secara hierarki dimulai dari direktori `/root` sebagai pusatnya.
+- Perintah dasar seperti pwd, ls, cd, dan cat memberi informasi ke pengguna tentang direktori, isi folder, dam memungkinkan pengguna untuk berpindah direktori.
+- Pengguna dapat mengubah kepemilikan file menggunakan perintah `chown` dan mengubah izin akses menggunakan perintah `chmod`>
 
 ---
 
