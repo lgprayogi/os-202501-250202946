@@ -178,7 +178,7 @@ Keterangan ini juga bisa dilihat dari gambar berikut:
 
 - Struktur file dalam Linux terorganisir secara hierarki dimulai dari direktori `/root` sebagai pusatnya.
 - Perintah dasar seperti pwd, ls, cd, dan cat memberi informasi ke pengguna tentang direktori, isi folder, dam memungkinkan pengguna untuk berpindah direktori.
-- Pengguna dapat mengubah kepemilikan file menggunakan perintah `chown` dan mengubah izin akses menggunakan perintah `chmod`>
+- Pengguna dapat mengubah kepemilikan file menggunakan perintah `chown` dan mengubah izin akses menggunakan perintah `chmod`.
 
 ---
 
