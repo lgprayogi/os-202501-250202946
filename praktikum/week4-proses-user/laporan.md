@@ -95,24 +95,44 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 ## Kode / Perintah
 Tuliskan potongan kode atau perintah utama:
 ```bash
-uname -a
-lsmod | head
-dmesg | head
+whoami
+id
+groups
+sudo adduser praktikan
+sudo passwd praktikan
+ps aux | head -10
+top -n 1
+sleep 1000 &
+ps aux | grep sleep
+kill <PID>
+pstree -p | head -20
 ```
 
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+1. Experimen 1
+   ![experimen 1](<screenshots/id.jpeg>)
+2. Experimen 2
+   ![experimen 2](<screenshots/top.jpeg>)
+3. Experimen 3
+   ![experimen 3](<screenshots/sleep.jpeg>)
+4. Experimen 4
+   ![experimen 4](<screenshots/pstree.jpeg>)
 
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+1. Experimen 1
 
+   | Perintah | Output | Keterangan |
+   |:-------:|:--------:|:----------|
+   | `whoami` | upb | Perintah whoami berfungsi untuk menampilkan nama pengguna yang sedang aktif di terminal |
+   | `id` | uid=1000(upb) gid=1000(upb) groups=1000 (upb), 4(adm), 20(dialout), 24(cdrom), 25(floppy), 27 (sudo), 29(audio), 38(dip), 44(video), 46 (plugdev), 100 (users), 107(netdev), 1001(docker) | Perintah `id` berfungsi untuk menampilkan informasi identitas pengguna. termasuk ID pengguna (UID), ID grup utama (GID), dan daftar grup lain yang diikuti pengguna |
+   | `groups` | upb adm dialout cdrom floppy sudo audio dip video plugdev users netdev docker | Perintah `group` digunakan untuk menampilkan daftar grup yang diikuti pengguna |
+
+2. Experimen 2
+   
 ---
 
 ## Kesimpulan
