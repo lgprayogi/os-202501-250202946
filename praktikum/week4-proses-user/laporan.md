@@ -131,8 +131,49 @@ pstree -p | head -20
    | `id` | uid=1000(upb) gid=1000(upb) groups=1000 (upb), 4(adm), 20(dialout), 24(cdrom), 25(floppy), 27 (sudo), 29(audio), 38(dip), 44(video), 46 (plugdev), 100 (users), 107(netdev), 1001(docker) | Perintah `id` berfungsi untuk menampilkan informasi identitas pengguna. termasuk ID pengguna (UID), ID grup utama (GID), dan daftar grup lain yang diikuti pengguna |
    | `groups` | upb adm dialout cdrom floppy sudo audio dip video plugdev users netdev docker | Perintah `group` digunakan untuk menampilkan daftar grup yang diikuti pengguna |
 
-2. Experimen 2
-   
+2. Experimen
+
+  A. Perintah `ps aux` digunakan untuk menampilkan informasi tentang semua proses yang sedang berjalan di sistem, termasuk semua pengguna dan proses yang tidak terhubung ke terminal.
+
+   Penjelasan output:
+
+   | Kolom | Nama | Keterangan |
+   | :-----:|:----:|:---------:|
+   | USER| User | Pengguna yang menjalankan akses |
+   | PID | Process ID | Nomor identifikasi unik milik proses, digunakan untuk mengelila atau menghentikan proses |
+   | %CPU | CPU usage | Persentase penggunaan CPU oleh proses saat ini |
+   | %MEM | Memory usage | Persentase penggunaan RAM oleh proses |
+   | VSZ | Virtual Memory Size | Total memori virtual yang dialokasikan untuk menggunakan proses|
+   | RSS | Resident Set Size | Jumlah RAM fisik yang digunakan oleh proses|
+   | TTY | Terminal | Terminal asal proses |
+   | STAT | Status | Status proses, misal R = Running, S = Sleeping |
+   | START | Start time | Waktu saat proses dimulai|
+   | TIME | CPU Time | Total waktu CPU yang telah digunakan proses sejak berjalan|
+   | COMMAND | Command | Perintah yang menjalankan proses tersebut|
+
+  B. Perintah `top -n 1` 
+   Perintah `top` digunakan untuk menampilkan informasi real-time tentang proses yang berjalan dan penggunaan sumber daya sistem, opsi `-n` = number of iteration. Artinya, berapa kali `top` melakukan refresh. Jadi `-n 1` hanya akn membuat perintah `top` dieksekusi satu kali tanpa refresh lagi setelahnya.
+
+  Penjelasan output:
+
+  | Kolom | Nama | Keterangan| 
+  |:------:|:-----:|:---------|
+  | PID | Process ID | Nomor identifikasi unik milik proses, digunakan untuk mengelola atau menghentikan proses.|
+  | USER | User | Pengguna yang menjalankan akses |
+  | PR | Priority | Prioritas proses, semakin rendah angka = prioritas lebih tinggi |
+  | NI | Nice value | Nilai prioritas tambahan|
+  | VIRT | Virtual memory | Total memori virtual yang dialokasikan proses |
+  | RES | Resident memory | Jumlah RAM fisik yang digunakan proses |
+  | SHR | Shared memory | Memori yang dapat dibagi dengan proses lain |
+  | S | State | Status proses R = Running, S= Sleeping, T= Stopped. |
+  | %CPU | CPU Usage | Persentase CPU yang digunakan proses saat ini |
+  | %MEM | Memory Usage | Persentase penggunaan RAM oleh proses |
+  | TIME+ | CPU time | Total waktu CPU yang dipakai sejak proses dimulai |
+  | COMMAND | Command | Perintah yang menjalankan proses tersebut |
+
+
+
+  
 ---
 
 ## Kesimpulan
