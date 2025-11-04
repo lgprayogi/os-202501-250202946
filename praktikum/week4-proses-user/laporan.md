@@ -138,7 +138,7 @@ pstree -p | head -20
    Penjelasan output:
 
    | Kolom | Nama | Keterangan |
-   | :-----:|:----:|:---------:|
+   | :-----:|:----:|:---------|
    | USER| User | Pengguna yang menjalankan akses |
    | PID | Process ID | Nomor identifikasi unik milik proses, digunakan untuk mengelila atau menghentikan proses |
    | %CPU | CPU usage | Persentase penggunaan CPU oleh proses saat ini |
@@ -183,11 +183,11 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ## Quiz
 1. Apa fungsi dari proses `init` atau `systemd` dalam sistem Linux?   
-   **Jawaban:**  
+   **Jawaban:**  `init` atau `systemd` bertanggung jawab untuk mengelola proses boot, memulai dan menghentikan layanan, dan menangani penghentian sistem.
 2. Apa perbedaan antara `kill` dan `killall`? 
-   **Jawaban:**  
+   **Jawaban:**  perintah `kill` hanya akan menghentikan satu program berdasarkan process ID (PID) nya, sementara kill all menghentikan semua proses dengan nama yang cocok sekaligus.
 3. Mengapa user `root` memiliki hak istimewa di sistem Linux?
-   **Jawaban:**  
+   **Jawaban:**  user `root` memiliki hak istimewa di sistem linux karena bertindak sebagai administrator utama (superuser) yang memiliki akses ke semua perintah dan sumber daya sistem.
 
 ---
 
