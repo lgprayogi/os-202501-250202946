@@ -22,7 +22,13 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+- Suatu proses adalah program yang sedang dieksekusi, dan status aktivitas terkini suatu proses direpresentasikan oleh penghitung program, serta register lainnya.
+- Saat suatu proses dieksekusi, statusnya berubah. Ada empat status umum suatu proses: _ready, running, waiting,_ dan _terminated_.
+- Sebagian besar sistem operasi (termasuk UNIX, Linux, dan Windows) mengidentifikasi
+proses berdasarkan identifikasi proses unik (atau pid), yang biasanya berupa angka integer. PID menyediakan nilai unik untuk setiap proses dalam sistem, dan dapat digunakan sebagai indeks untuk mengakses berbagai atribut proses di dalam kernel.
+
+
+sumber: _Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System Concepts, 10th Edition, Wiley, 2018._
 
 ---
 
@@ -206,28 +212,21 @@ init(Ubuntu)(1)-+-SessionLeader(8)---bash(9)-+-head(74)
 ```
 
  dapat dilihat bahwa awal dari cabang adalah init(Ubuntu)(1) yang merupakan proses utama yang bertanggung jawab memulai dan mengelola semua proses lain dalam sistem.
-  
----
 
-## Tugas
 
-1. Hierarki proses dalam bentuk diagram pohon
-
-```bash
-init(Ubuntu)(1)-+-SessionLeader(8)---bash(9)-+-head(74)
-                |                            `-pstree(73)
-                |-init(5)---{init}(6)
-                `-{init(Ubuntu)}(7)
-```
-
-2. Hubungan antara user management dan keamanan sistem Linux
+4. Hubungan antara user management dan keamanan sistem Linux
 
    User management adalah hal yang sangat penting untuk keamanan sistem linux, karena dengan memanajemen pengguna, mengatur akses pengguna atas perintah dan sumber daya komputer akan membuat lingkungan sistem lebih aman dan terkendali.
+   
+---
 
 
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+- Pengguna bisa melihat informasi user melalui perintah seperti `whoami, id, groups`
+- Segala proses yang berjalan di komputer dicatat dan bisa di tampilkan melalui perintah `ps aux`
+- Setiap proses memiliki process ID nya masing masing
+- User management bisa memengaruhi keamanan sistem linux dengan memanajemen akses pengguna terhadap komputer 
 
 ---
 
@@ -243,8 +242,8 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?  Memahami materi dan berbagai oitput dari perintah linux.
+- Bagaimana cara Anda mengatasinya?  Mempelajarinya lewat berbagai sumber di internet.
 
 ---
 
