@@ -242,7 +242,7 @@ init(Ubuntu)(1)-+-SessionLeader(8)---bash(9)-+-head(74)
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  Memahami materi dan berbagai oitput dari perintah linux.
+- Apa bagian yang paling menantang minggu ini?  Memahami materi dan berbagai output dari perintah linux.
 - Bagaimana cara Anda mengatasinya?  Mempelajarinya lewat berbagai sumber di internet.
 
 ---
