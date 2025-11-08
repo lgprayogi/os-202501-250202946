@@ -22,7 +22,11 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+
+1. Penjadwalan CPU menentukan proses mana yang mendapat giliran menggunakan CPU untuk memaksimalkan efisiensi sistem.
+2. FCFS (First Come First Served): proses dijalankan sesuai urutan kedatangan, mudah diterapkan tapi dapat menyebabkan waktu tunggu lama.
+3. SJF (Shortest Job First): memilih proses dengan waktu eksekusi terpendek, menghasilkan waktu tunggu rata-rata paling kecil, namun sulit diterapkan karena durasi CPU burst sulit diprediksi.
+
 
 ---
 
@@ -113,16 +117,18 @@ Turnaround Time (TAT) = WT + Burst Time
      ```
 
 2. Eksperimen 2 - SFJ (Shortest Job First)
-   -Tabel proses:
+  - Tabel proses:
 
    ![Screenshot hasil](<screenshots/EXPERIMENT 2.png>)
 
-   -Gantt Chart
-      ```
+- Gantt Chart
+  
+```
      | P1 | P2 | P3 | P4 |
      0    7    11    19   28
-     ```
-   - Tabel perbandingan FCFS dan SJF
+```  
+     
+   -  Tabel perbandingan FCFS dan SJF
 
   | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
   |------------|------------------|----------------------|------------|-------------|
@@ -138,9 +144,25 @@ Shortest Job First(SFJ) menjadi lebih unggul dari FCFS karena memproses proses t
 
 ![skenario](<screenshots/tugas skenario 1& 2.png>)
 
+SKENARIO 1
+
+| Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+|------------|------------------|----------------------|------------|-------------|
+| FCFS | 9,5 | 16 | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+| SJF | 8,5 | 15 | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+
+SKENARIO 2
+
+| Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+|------------|------------------|----------------------|------------|-------------|
+| FCFS | 14,5 | 23,25 | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+| SJF | 13 | 21,75 | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+
+
 ## Kesimpulan
-
-
+- Algoritma SJF memiliki rata rata waiting time dan turnaround time yang lebih kecil, karena SJF memprioritaskan proses dengan burst time terpendek. Tapi hal ini juga bisa menyebabkan starvation pada proses panjang jika banyak proses pendek berdatangan.
+- Algoritma FCSF akan menjalankan perintah yang datang lebih dahulu. Namun algoritma ini menyebabkan waktu tunggu yang lama pada proses di belakang jika proses yang di depan memiliki burst time yang lama.
+- SJF lebih efisien karena menghasilkan rata-rata waiting time dan turnaround time lebih kecil daripada FCFS.
 
 ---
 
@@ -156,8 +178,8 @@ Shortest Job First(SFJ) menjadi lebih unggul dari FCFS karena memproses proses t
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?  Memahami materi.
+- Bagaimana cara Anda mengatasinya?  Mempelajarinya lewat internet dan berdiskusi.
 
 ---
 
