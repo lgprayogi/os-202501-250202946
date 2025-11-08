@@ -128,21 +128,29 @@ Turnaround Time (TAT) = WT + Burst Time
   |------------|------------------|----------------------|------------|-------------|
   |FCFS | 10,25 | 17,25 | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
   | SJF | 7,75 | 14,75 | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+
+
+Shortest Job First(SFJ) menjadi lebih unggul dari FCFS karena memproses proses terpendek lebih dulu sehingga mengurangi waktu tunggu untuk proses yang lain. FCFS mencegah starvation pada proses karena setiap proses akan mendapatkan kesempatan untuk dijalankan, tidak seperti SJF yang akan menyebabkan proses panjang tertunda terus menerus saat ada banyak proses pendek berdatangan.
      
 ---
 
+## Tugas
+
+![skenario](<screenshots/tugas skenario 1& 2.png>)
+
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+
+
 
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. Apa perbedaan utama antara FCFS dan SJF?
+   **Jawaban:**  FCSF akan menjalankan proses yang datang terlebih dahulu sedangkan SJF akan memprioritaskan proses terpendek terlebih dahulu.
+2. Mengapa SJF dapat menghasilkan rata-rata waktu tunggu minimum?
+   **Jawaban:**  Karena SJF menjalankan proses terpendek terlebih dahulu sehingga proses selanjutnya tidak akan menunggu terlalu lama.
+3. Apa kelemahan SJF jika diterapkan pada sistem interaktif?
+   **Jawaban:**  SJF akan menyebabkan starvation pada proses panjang karena SJF selalu memprioritaskan proses terpendek walaupun datang belakangan.
 
 ---
 
