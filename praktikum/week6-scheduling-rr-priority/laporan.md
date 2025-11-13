@@ -91,17 +91,45 @@ Tuliskan potongan kode atau perintah utama:
 
 ---
 
-## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+## Hasil Eksekusi & Analisis
 
----
+1. Eksperimen 1 - Round Robin (RR)
+   - Time quantum (q) = 3
+   - Perhitungan Waiting Time dan Turnaround Time menggunakahn:
+     ```
+     TAT = Finish Time - Arrival
+     WT =  TAT - Burst Time
+     ```
+   - Tabel hasil:
+     
 
-## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+   - Gantt Chart:
+     ```
+     | P1 | P2 | P3 | P4 | P1 | P3 | P4 | P3 |
+     0    3    6    9   12   14   17   20    22
+     ```
 
+   2. Eksperimen 2 - Priority Scheduling (Non-Preemptive)
+      - Perhitungan Waiting Time dan Turnaround Time menggunakan:
+        ```
+        WT[i] = waktu mulai eksekusi - Arrival[i]
+        TAT[i] = WT[i] + Burst[i]
+        ```
+      - Tabel hasil:
+        ![priority](<screenshots/priority.jpg>)
+
+      - Tabel perbandingan RR dan Priority:
+
+     | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+     |------------|------------------|----------------------|------------|-------------|
+     | RR | 8.5 | 14 | Adil terhadap semua proses | Tidak efisien jika quantum tidak tepat |
+     | Priority | 5.25 | 10.75 | Efisien untuk proses penting | Potensi *starvation* pada prioritas rendah |
+
+   3. Eksperimen 3 - Analisis Variasi Time Quantum
+      - _time quantum (q)_ = 2:
+        ![rr dengan q = 2](<screenshots/rr_2.jpg>)
+      - _time quantum (q)_ = 5:
+        ![rr dengan q = 5](<screenshots/rr_5.jpg>)
 ---
 
 ## Kesimpulan
