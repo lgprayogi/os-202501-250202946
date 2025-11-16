@@ -27,7 +27,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 dan mengalokasikan CPU untuk proses tersebut. CPU dialokasikan ke
 proses yang dipilih oleh operator.
 - Penjadwalan round-robin (RR) mengalokasikan CPU ke setiap proses untuk waktu kuantum tertentu. Jika proses tersebut tidak melepaskan CPU sebelum kuantum waktunya habis, proses tersebut akan dihentikan sementara, dan proses lain akan dihentikan. 
-- Priority Scheduling menetapkan prioritas untuk setiap proses, dan CPU dialokasikan ke proses dengan prioritas tertinggi. Proses dengan prioritas yang sama dapat dijadwalkan dalam urutan FCFS atau menggunakan RR sc.
+- Priority Scheduling menetapkan prioritas untuk setiap proses, dan CPU dialokasikan ke proses dengan prioritas tertinggi. Proses dengan prioritas yang sama dapat dijadwalkan dalam urutan FCFS atau menggunakan penjadwalan RR.
 
 ---
 
@@ -137,7 +137,10 @@ Tuliskan potongan kode atau perintah utama:
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+Dari praktikum ini dapat disimpulkan:
+- Algoritma Priority memiliki rata rata Waiting Time dan Turnaround Time yang lebih baik dibanding Round Robin, namun algoritma ini juga bisa menyebabkan starvation pada proses yang nemiliki prioritas yang rendah.
+- Keefektifan Algoritma Round Robin bergantung pada time quantum nya Jika time quantum terlalu kecil, terjadi banyak context switching sehingga overhead meningkat. Jika time quantum terlalu besar, algoritma menjadi mirip FCFS dan kehilangan responsivitas. 
+- Algoritma Round Robin bersifat adil pada semua proses karena setiap proses mendapat jatah waktu CPU yang sama secara bergiliran tanpa membedakan prioritas atau ukuran proses.
 
 ---
 
@@ -145,9 +148,9 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 1. Apa perbedaan utama antara Round Robin dan Priority Scheduling?  
    **Jawaban:**  Round Robin menggunakan sistem waktu siklus (kuantum) yang sama untuk semua proses untuk keadilan, sementara Priority Scheduling menjadwalkan proses berdasarkan tingkat prioritas yang ditetapkan, di mana proses dengan prioritas lebih tinggi akan dijalankan terlebih dahulu.
 2. Apa pengaruh besar/kecilnya *time quantum* terhadap performa sistem?   
-   **Jawaban:**  
+   **Jawaban:**  Jika time quantum terlalu kecil, maka akan ada peningkatan context switch namun juga akan menyebabkan kerugian seperti Overhead tinggi, throughput menurun, waiting time dan turnaround time juga meningkat. Sedangkan, jika time quantum besar, maka throughput akan meningkat namun akan ada penurunan context switch dan response time buruk, karena time quantum yang terlalu besar justru akan berperilaku seperti FCFS.
 3. Mengapa algoritma Priority dapat menyebabkan *starvation*?
-   **Jawaban:**  
+   **Jawaban:**  Karena algoritma Priority akan selalu menjalankan proses dengan prioritas tertinggi, hal ini menyebabkan proses dengan prioritas rendah mungkin tidak akan pernah mendapat giliran untuk dieksekusi.
 
 ---
 
