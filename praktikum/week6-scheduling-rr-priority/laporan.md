@@ -23,7 +23,11 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+- Penjadwalan CPU adalah tugas memilih proses yang menunggu dari antrean siap
+dan mengalokasikan CPU untuk proses tersebut. CPU dialokasikan ke
+proses yang dipilih oleh operator.
+- Penjadwalan round-robin (RR) mengalokasikan CPU ke setiap proses untuk waktu kuantum tertentu. Jika proses tersebut tidak melepaskan CPU sebelum kuantum waktunya habis, proses tersebut akan dihentikan sementara, dan proses lain akan dihentikan. 
+- Priority Scheduling menetapkan prioritas untuk setiap proses, dan CPU dialokasikan ke proses dengan prioritas tertinggi. Proses dengan prioritas yang sama dapat dijadwalkan dalam urutan FCFS atau menggunakan RR sc.
 
 ---
 
@@ -101,7 +105,7 @@ Tuliskan potongan kode atau perintah utama:
      WT =  TAT - Burst Time
      ```
    - Tabel hasil:
-     
+     ![rr q 3](<screenshots/rr_3.jpg>)
 
    - Gantt Chart:
      ```
