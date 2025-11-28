@@ -197,6 +197,7 @@ Deadlock pada simulasi Dining Philosophers terjadi ketika semua filsuf sudah men
 - Analisis Hasil Modifikasi:
 Hasil modifikasi pada simulasi Dining Philosophers berhasil mencegah deadlock karena beberapa strategi diterapkan secara bersamaan. Pertama, membatasi maksimal 4 filsuf yang bisa makan bersamaan memastikan selalu ada setidaknya satu garpu bebas, sehingga tidak ada yang saling menunggu selamanya. Kedua, filsuf terakhir mengambil garpu dalam urutan terbalik, sehingga circular wait tidak terbentuk. Ketiga, penggunaan semaphore/mutex untuk tiap garpu menjaga agar hanya satu filsuf yang memegang garpu pada satu waktu dan filsuf lain menunggu dengan tertib. Kombinasi strategi ini membuat setiap filsuf bisa memperoleh kedua garpu saat giliran mereka, makan, lalu melepaskan garpu tanpa ada yang terjebak menunggu selamanya. Dengan begitu, sistem berjalan lancar, semua filsuf bisa makan, dan deadlock berhasil dihindari.
 
+
 3. **Eksperimen 3 – Analisis Deadlock**
 
 | Kondisi Deadlock | Terjadi di Versi Deadlock                                | Solusi di Versi Fixed                                                                      |
