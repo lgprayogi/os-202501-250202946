@@ -1,9 +1,7 @@
 import csv
 import os
 
-# ===============================
 # BACA DATASET CSV
-# ===============================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CSV_FILE = os.path.join(BASE_DIR, "dataset.csv")
 
@@ -21,9 +19,8 @@ with open(CSV_FILE, newline='', encoding='utf-8') as file:
         })
 
 
-# ===============================
 # FCFS ALGORITHM
-# ===============================
+
 def fcfs(processes):
     time = 0
     result = []
@@ -45,10 +42,7 @@ def fcfs(processes):
 
     return result
 
-
-# ===============================
 # SJF NON-PREEMPTIVE
-# ===============================
 def sjf_non_preemptive(processes):
     time = 0
     completed = []
@@ -77,9 +71,9 @@ def sjf_non_preemptive(processes):
     return completed
 
 
-# ===============================
+
 # TAMPILKAN HASIL
-# ===============================
+
 def print_table(title, data):
     print(f"\n{title}")
     print("Proses  Arrival  Burst  Waiting  Turnaround")
@@ -99,9 +93,7 @@ def print_table(title, data):
     print("Rata-rata Turnaround Time:", total_tat / n)
 
 
-# ===============================
-# MAIN
-# ===============================
+
 if __name__ == "__main__":
     fcfs_result = fcfs(proses_list)
     sjf_result = sjf_non_preemptive(proses_list)
